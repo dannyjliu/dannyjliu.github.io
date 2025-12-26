@@ -1,8 +1,20 @@
 {
   "name": "HugoBlox Codespace",
-  "image": "ghcr.io/HugoBlox/hugo-blox-dev:hugo0.152.2",
-  "updateContentCommand": "pnpm install --frozen-lockfile --prefer-offline",
-  "postCreateCommand": "pnpm --version && hugo version",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/hugo:1": {
+      "extended": true,
+      "version": "0.139"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    },
+    "ghcr.io/devcontainers/features/go:1": {
+      "version": "1.22"
+    }
+  },
+  "postCreateCommand": "npm install -g pnpm@10.14.0 && pnpm install --frozen-lockfile --prefer-offline",
+  "postStartCommand": "hugo version && pnpm --version",
   "customizations": {
     "vscode": {
       "extensions": [
