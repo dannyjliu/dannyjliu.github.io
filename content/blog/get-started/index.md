@@ -9,8 +9,7 @@ image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
 
 authors:
-  - me
-  - Ted
+  - dannyliu
 
 tags:
   - Academic
